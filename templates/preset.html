@@ -1,0 +1,15 @@
+<div class="inner cover col-xs-12 function-tabs">
+	<div class="row" >
+		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<h2 class="tab-title">
+			<span class="glyphicon glyphicon-list"></span> Choose from the <span class="emphasis">{{title}}s</span>. </h2>
+		</div>
+		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<ul class="btn-group btn-group-justified">
+				<li class="btn btn-default" ng-repeat="list in presets" ng-click="selectList(list)">{{list.listName}}</li>
+			</ul>
+		</div>
+		<!-- The list content -->
+		<div ng-include="'/templates/list-content.html'"></div>
+	</div>
+</div>

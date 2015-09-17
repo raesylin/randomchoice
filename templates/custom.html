@@ -1,0 +1,26 @@
+<div class="inner cover function-tabs">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<h2 class="tab-title">
+				<span class="glyphicon glyphicon-edit"></span> Make a <span class="emphasis">{{title}}</span> list.
+			</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<form id="listForm" ng-submit="addItem()">
+		 		<div class="form-group">
+		    		<div class="input-group">
+		    			<input type="text" class="form-control" placeholder="New item..." ng-model="item.itemName" autofocus>
+						<span class="input-group-btn">
+		       			<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-plus"></span></button>
+		   				</span>
+	    			</div><!-- /input-group -->
+	  			</div><!-- /form-group -->
+			</form>
+		</div>
+		<!-- The list content -->
+		<div ng-include="'/templates/list-content.html'"></div>
+	</div>
+
+</div>

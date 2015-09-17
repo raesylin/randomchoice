@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3" id="listContent">
+		<ul class="list-group">
+			<li ng-class="{'list-group-item-success':item.chosen}" class="list-group-item" ng-repeat="item in list"> 
+				{{item.itemName}}
+				<span class="badge"><a href ng-click="removeItem(item)"><span class="glyphicon glyphicon-remove"></span></a></span></li>
+		</ul>
+	</div>	
+</div>
+<div class="row" ng-show="hasItem()">
+	<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+		<div class="center-block">
+			<button type="button" class="btn btn-warning" ng-click="makeChoice()">Choose One!</button>
+			<button type="button" class="btn btn-info" ng-click="reloadList()" ng-show="$state.includes('preset');">Reload List Content</button>
+			<button type="button" class="btn btn-default" ng-click="clearList()">Clear List</button>
+		</div>
+	</div>
+</div>
