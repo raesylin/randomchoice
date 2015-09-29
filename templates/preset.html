@@ -6,10 +6,11 @@
 		</div>
 		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 			<ul class="btn-group btn-group-justified">
-				<li class="btn btn-default" ng-repeat="list in presets" ng-click="selectList(list)">{{list.listName}}</li>
+				<li class="btn btn-default" ng-repeat="list in presets" ng-click="selectList($index)">{{list.listName}}</li>
 			</ul>
 		</div>
 		<!-- The list content -->
-		<div ng-include="'templates/list-content.html'"></div>
+		<list-content></list-content>
+		<!-- <div ng-include="'templates/list-content.html'"></div> -->
 	</div>
 </div>

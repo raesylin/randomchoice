@@ -1,8 +1,5 @@
 angular
 	.module('app')
-	.controller('homeCtrl', ['$scope', 'Presets', function($scope, Presets) {
-				$scope.title = "home",
-				Presets.get().then(function(data) {
-					$scope.friends = data;
-				});
+	.controller('homeCtrl', ['$scope', function($scope) {
+				$scope.title = "home";
 	}]);

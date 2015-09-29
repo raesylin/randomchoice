@@ -1,7 +1,5 @@
 angular
-	.module('app', [
-		'ui.router'
-		])
+	.module('app', ['ui.router'])
 	.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 		$urlRouterProvider.otherwise('/');
 
@@ -9,19 +7,7 @@ angular
 		.state('preset', {
 			url: '/preset',
 			templateUrl: 'templates/preset.html',
-			controller: 'presetCtrl',
-			resolve: {
-				presets: ['Presets', function(Presets) {
-					return Presets.get();
-				}]
-				// // // Or do the following:
-
-				// friends: ['$http', function($http) {
-				// 	return $http.get('/api/friends.json').then(function(response) {
-				// 		return response.data;
-				// 	})
-				// }]
-			}
+			controller: 'presetCtrl'
 		})
 		.state('custom', {
 			url: '/custom',
@@ -39,3 +25,10 @@ angular
 			controller: 'homeCtrl'
 		})
 	}])
+	.directive('listContent', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'templates/list-content.html',
+			controller: 'listCtrl'
+		};
+	});

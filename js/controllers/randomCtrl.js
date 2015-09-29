@@ -1,6 +1,7 @@
 angular
 	.module('app')
-	.controller('randomCtrl', ['$scope', function($scope) {
+	.controller('randomCtrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
+
 		$scope.numbers = [];
 
 		$scope.getRandom = function() {
@@ -11,6 +12,8 @@ angular
 			for (var i = 0; i < number; i++) {
 				$scope.numbers.push(Math.floor(Math.random() * (end + 1 - start) + start));
 			};
+			$location.hash("results");
+			$anchorScroll();
 		};
 
 		$scope.isNumDefined = function() {
