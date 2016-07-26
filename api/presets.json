@@ -3,23 +3,11 @@
 		"listName": "lunch",
 		"listItem": [
 			{
-				"itemName": "instant noodles",
-				"chosen": false
-			},
-			{
 				"itemName": "hot dog",
 				"chosen": false
 			},
 			{
-				"itemName": "dumplings",
-				"chosen": false
-			},
-			{
 				"itemName": "pizza",
-				"chosen": false
-			},
-			{
-				"itemName": "Vietnamese",
 				"chosen": false
 			},
 			{
